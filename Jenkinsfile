@@ -26,7 +26,7 @@ pipeline{
             steps {
                 sh 'apk add --update python3 py3-pip'
                 sh 'pip install xmlrunner'
-                sh "python3 \${WORKSPACE}/exam/test_task.py"
+                sh "python3 \${WORKSPACE}/test_task.py"
                 
             }
             post {
