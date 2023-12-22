@@ -26,7 +26,7 @@ pipeline{
             steps {
                 sh 'apk add --update python3 py3-pip'
                 sh 'pip install xmlrunner'
-                sh "python3 \${WORKSPACE}/Exam/test_task.py"
+                sh "python3 \${WORKSPACE}/Exam/Exam/test_task.py"
                 
             }
             post {
@@ -45,7 +45,7 @@ pipeline{
         stage('Docker Build'){
             steps {
                 sh 'pwd'
-                sh 'docker build -t exam /var/jenkins_home/workspace/Exam'
+                sh 'docker build -t exam /var/jenkins_home/workspace/Exam/Exam'
             }
 
         }
@@ -68,7 +68,7 @@ pipeline{
                     // Створити Docker образ та позначити його тегом
                     def myimageTag = "ageevprunich/exam"
                     // sh "docker build -t ${myimageTag} -f Dockerfile ."
-                    sh "docker build -t ${myimageTag} /var/jenkins_home/workspace/Exam"
+                    sh "docker build -t ${myimageTag} /var/jenkins_home/workspace/Exam/Exam"
                 }
             }
         }
