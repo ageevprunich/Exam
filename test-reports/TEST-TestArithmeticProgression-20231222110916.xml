@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<testsuite name="TestArithmeticProgression-20231222110916" tests="1" time="0.002" failures="0" errors="1">
+	<testcase classname="TestArithmeticProgression" name="test_calculate_sum" time="0.002">
+		<error type="TypeError" message="ArithmeticProgression.__init__() got an unexpected keyword argument 'first_term'"><![CDATA[Traceback (most recent call last):
+  File "c:\Users\ageev\Documents\GitHub\Exam\test_task.py", line 6, in test_calculate_sum
+    progression = ArithmeticProgression(first_term=4, common_difference=3)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ArithmeticProgression.__init__() got an unexpected keyword argument 'first_term'
+]]></error>
+	</testcase>
+	<system-out><![CDATA[]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
